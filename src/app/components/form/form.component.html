@@ -1,60 +1,65 @@
 <div class="center" style="background: #17B29D">
   <div class="container">
-    <div class="card bg-white">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12">
+          <div class="card bg-white" style="width: 100%">
 
-      <div class="row justify-content-center mt-3 mb-3 mx-3">
-        <div class="col-4"></div>
-        <div class="col-4">
-          <img src="/assets/Codeez_logo-13.png" style="width: 300px; height: 300px">
-        </div>
-        <div class="col-4">
-          <div class="float-right">
-            <h1>
-              <span class="badge rounded-circle align-items-center text-white" 
-                style="background: #F8992C">{{codeez.length}}</span>
-            </h1>
-          </div>
-        </div>
+              <div class="row justify-content-center mt-3 mb-3 mx-3">
+                <div class="col-sm-2 col-lg-4"></div>
+                <div class="col-sm-8 col-lg-4">
+                  <img class="img-responsive" src="/assets/Codeez_logo-13.png">
+                </div>
+                <div class="col-sm-2 col-lg-4">
+                  <div class="float-right">
+                    <h1>
+                      <span class="badge rounded-circle align-items-center text-white" 
+                        style="background: #F8992C">{{codeez.length}}</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="row justify-content-center align-items-center mb-3">
+                <div class="card" style="width: 90%; background: #FEC41E">
+                  <h1 class="card-title text-white text-center">Stel jy belang?</h1>
+                  <div class="row justify-content-center align-items-center ml-1 mr-1">
+                    <div class="col-6">
+                      <div class="form-group">
+                        <input [(ngModel)]="newCodee.name" type="text" class="form-control" placeholder="naam"/>
+                      </div>
+                    </div>
+                  
+                    <div class="col-6">
+                      <div class="form-group">
+                        <input [(ngModel)]="newCodee.phone" type="number" class="form-control" placeholder="nommer"/>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row justify-content-center align-items-center mr-1 ml-1">
+                    <div class="col-6">
+                      <div class="form-group">
+                        <input [(ngModel)]="newCodee.surname" type="text" class="form-control"  placeholder="van"/>
+                      </div>
+                    </div>
+                  
+                    <div class="col-6">
+                      <div class="form-group">
+                        <input [(ngModel)]="newCodee.email" type="text" class="form-control" placeholder="epos"/>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="row justify-content-center align-items-center mb-2">
+                      <button class="btn text-white font-weight-bold" 
+                        type="button" style="background: #72C9C0" (click)="addNewCodee(newCodee)">stoor</button>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+
       </div>
-
-      <div class="row justify-content-center align-items-center mb-3">
-        <div class="card" style="width: 75%; background: #FEC41E">
-          <h1 class="card-title text-white text-center">Stel jy belang?</h1>
-          <div class="row justify-content-center align-items-center ml-1 mr-1">
-            <div class="col-6">
-              <div class="form-group">
-                <input [(ngModel)]="newCodee.name" type="text" class="form-control" placeholder="naam"/>
-              </div>
-            </div>
-          
-            <div class="col-6">
-              <div class="form-group">
-                <input [(ngModel)]="newCodee.phone" type="number" class="form-control" placeholder="nommer"/>
-              </div>
-            </div>
-          </div>
-          
-          <div class="row justify-content-center align-items-center mr-1 ml-1">
-            <div class="col-6">
-              <div class="form-group">
-                <input [(ngModel)]="newCodee.surname" type="text" class="form-control"  placeholder="van"/>
-              </div>
-            </div>
-          
-            <div class="col-6">
-              <div class="form-group">
-                <input [(ngModel)]="newCodee.email" type="text" class="form-control" placeholder="epos"/>
-              </div>
-            </div>
-          </div>
-
-          <div class="row justify-content-center align-items-center mb-2">
-              <button class="btn text-white font-weight-bold" 
-                type="button" style="background: #72C9C0" (click)="addNewCodee(newCodee)">stoor</button>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </div>
