@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import * as actions from '../../store/actions';
 import { Codee } from 'src/app/models/codee';
 import { AppState } from 'src/app/store/app-state';
+import { CodeeService } from 'src/app/services/codee/codee.service';
 
 @Component({
   selector: 'app-form',
@@ -11,8 +12,9 @@ import { AppState } from 'src/app/store/app-state';
 })
 export class FormComponent implements OnInit {
   codeez: Codee[];
+  newCodee: Codee = {} as Codee;
 
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>, private codeeService: CodeeService) { }
 
   ngOnInit() {
     this.store.dispatch(new actions.GetCodeez);
@@ -21,6 +23,10 @@ export class FormComponent implements OnInit {
       this.codeez = codeeState.codeez;
       console.log(this.codeez);
     })    
+  }
 
+  addNewCodee(): void {
+    this.codeeService.addNewCodee(this.newCodee);
+    this.newCodee = {} as Codee;
   }
 }

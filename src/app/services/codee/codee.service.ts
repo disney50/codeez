@@ -19,5 +19,9 @@ export class CodeeService {
         return actions.map(action => new Codee(action.payload.doc.id, action.payload.doc.data() as CodeeData));
       })
     )
-   }
+  }
+
+  addNewCodee(codee: Codee) {
+    this.codeeCollection.add(codee);
+  }
 }

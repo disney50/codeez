@@ -11,6 +11,7 @@ import { StoreModule } from '@ngrx/store';
 import * as reducers from './store/reducers';
 import * as effects from './store/effects';
 import { EffectsModule } from '@ngrx/effects';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EffectsModule } from '@ngrx/effects';
     AngularFirestoreModule,
     AppRoutingModule,
     StoreModule.forRoot({codee: reducers.codeeReducer}),
-    EffectsModule.forRoot([effects.CodeeEffects])
+    EffectsModule.forRoot([effects.CodeeEffects]),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

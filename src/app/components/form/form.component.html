@@ -23,13 +23,13 @@
           <div class="row justify-content-center align-items-center ml-1 mr-1">
             <div class="col-6">
               <div class="form-group">
-                <input class="form-control" type="text" placeholder="naam">
+                <input [(ngModel)]="newCodee.name" type="text" class="form-control" placeholder="naam"/>
               </div>
             </div>
           
             <div class="col-6">
               <div class="form-group">
-                <input class="form-control" type="text" placeholder="nommer">
+                <input [(ngModel)]="newCodee.phone" type="number" class="form-control" placeholder="nommer"/>
               </div>
             </div>
           </div>
@@ -37,20 +37,20 @@
           <div class="row justify-content-center align-items-center mr-1 ml-1">
             <div class="col-6">
               <div class="form-group">
-                <input class="form-control" type="text" placeholder="van">
+                <input [(ngModel)]="newCodee.surname" type="text" class="form-control"  placeholder="van"/>
               </div>
             </div>
           
             <div class="col-6">
               <div class="form-group">
-                <input class="form-control" type="text" placeholder="epos">
+                <input [(ngModel)]="newCodee.email" type="text" class="form-control" placeholder="epos"/>
               </div>
             </div>
           </div>
 
           <div class="row justify-content-center align-items-center mb-2">
               <button class="btn text-white font-weight-bold" 
-                type="button" style="background: #72C9C0">stoor</button>
+                type="button" style="background: #72C9C0" (click)="addNewCodee(newCodee)">stoor</button>
           </div>
         </div>
       </div>
