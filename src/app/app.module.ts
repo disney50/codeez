@@ -7,6 +7,10 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { FormComponent } from './components/form/form.component';
 import { AppRoutingModule } from './app-routing.module';
+import { StoreModule } from '@ngrx/store';
+import * as reducers from './store/reducers';
+import * as effects from './store/effects';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,9 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({codee: reducers.codeeReducer}),
+    EffectsModule.forRoot([effects.CodeeEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]

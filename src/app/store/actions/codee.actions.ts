@@ -14,6 +14,6 @@ export class GetCodeeSuccess implements Action {
     constructor (public payload: Codee) {}
 }
 
-export type CodeeAction = 
+export type CodeeActions = 
     | GetCodeez
     | GetCodeeSuccess
