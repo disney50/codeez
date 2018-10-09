@@ -6,6 +6,7 @@ export function codeeReducer(state = initialState, action: actions.CodeeActions)
         case actions.GET_CODEE_SUCCESS:
         const getCodeeSuccessAction = action as actions.GetCodeeSuccess;
         newState.codeez = [...newState.codeez, getCodeeSuccessAction.payload];
+        return newState;
         default: 
         return state;
     }

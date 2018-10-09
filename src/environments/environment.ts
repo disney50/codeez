@@ -9,7 +9,7 @@ export const environment = {
     authDomain: "codeez-a515d.firebaseapp.com",
     databaseURL: "https://codeez-a515d.firebaseio.com",
     projectId: "codeez-a515d",
-    storageBucket: "",
+    storageBucket: "codeez-a515d.appspot.com",
     messagingSenderId: "539230490456"
   }
 };
