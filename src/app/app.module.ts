@@ -12,11 +12,13 @@ import * as reducers from './store/reducers';
 import * as effects from './store/effects';
 import { EffectsModule } from '@ngrx/effects';
 import { FormsModule } from '@angular/forms';
+import { ListComponent } from './components/list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent
+    FormComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
