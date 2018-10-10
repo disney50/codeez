@@ -8,10 +8,8 @@
 
             <div class="col-4">
               <div class="float-left">
-                <h1>
-                  <span class="badge rounded-circle align-items-center text-white" 
-                    style="background: #72C9C0" (click)="navigateForm()">back</span>
-                </h1>
+                <button class="btn text-white" 
+                  style="background: #72C9C0" (click)="navigateForm()"><h3>back</h3></button>
               </div>            
             </div>
 
@@ -25,16 +23,16 @@
 
           <div class="row justify-content-center align-items-center">
             <div class="col-12">
-              <div class="card pt-3 pb-3 pl-3 pr-3" style="background: #FEC41E">
+              <div class="card pt-3 pl-3 pr-3" style="background: #FEC41E">
 
-                <h1 class="card-title text-white text-center">nuwe codeez</h1>
+                <h2 class="card-title text-white text-center">nuwe codeez</h2>
 
                 <div class="row justify-content-center align-items-center">
                   <div class="col-12">
                     <ul class="list-group text-center text-white">
-                      <li class="list-group-item mb-1" style="background: #17B29D"
+                      <li class="list-group-item mb-3" style="background: #17B29D"
                         *ngFor="let codee of codeez">
-                        <h5>{{codee.name}} {{codee.surname}}</h5>
+                        <h3>{{codee.name}} {{codee.surname}}</h3>
                         <b>nommer: </b>{{codee.phone}} <b> epos: </b> {{codee.email}}
                       </li>
                     </ul>

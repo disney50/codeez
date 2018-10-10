@@ -17,7 +17,6 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.store.select("codee").subscribe(codeeState => {
       this.codeez = codeeState.codeez;
-      console.log(this.codeez);
     })
   }
 
