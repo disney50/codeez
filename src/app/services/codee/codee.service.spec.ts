@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FormService } from './codee.service';
+import { CodeeService } from './codee.service';
 
-describe('FormService', () => {
+describe('CodeeService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: FormService = TestBed.get(FormService);
+    const service: CodeeService = TestBed.get(CodeeService);
     expect(service).toBeTruthy();
   });
 });
