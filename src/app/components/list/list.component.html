@@ -1,5 +1,5 @@
 <div class="center" style="background: #F8992C">
-  <div class="container">
+  <div class="container pt-3 pb-3">
     <div class="row justify-content-center align-items-center">
       <div class="col-12">
         <div class="card bg white pt-3 pb-3 pl-3 pr-3">
@@ -9,7 +9,7 @@
             <div class="col-4">
               <div class="float-left">
                 <button class="btn text-white" 
-                  style="background: #72C9C0" (click)="navigateForm()"><h3>back</h3></button>
+                  style="background: #72C9C0" (click)="navigateForm()"><h3>terug</h3></button>
               </div>            
             </div>
 
@@ -25,7 +25,7 @@
             <div class="col-12">
               <div class="card pt-3 pl-3 pr-3" style="background: #FEC41E">
 
-                <h2 class="card-title text-white text-center">nuwe codeez</h2>
+                <h1 class="card-title text-white text-center">nuwe codeez</h1>
 
                 <div class="row justify-content-center align-items-center">
                   <div class="col-12">
@@ -33,7 +33,7 @@
                       <li class="list-group-item mb-3" style="background: #17B29D"
                         *ngFor="let codee of codeez">
                         <h3>{{codee.name}} {{codee.surname}}</h3>
-                        <b>nommer: </b>{{codee.phone}} <b> epos: </b> {{codee.email}}
+                        <b>nommer: </b>{{codee.phone}} |<b> epos: </b> {{codee.email}}
                       </li>
                     </ul>
                   </div>

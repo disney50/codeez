@@ -2,31 +2,31 @@ export class Codee {
 
     constructor(key: string, data: CodeeData) {
         this.key = key;
-        this.name = data.name;
-        this.surname = data.surname;
-        this.phone = data.phone;
-        this.email = data.email;
+        this.naam = data.naam;
+        this.van = data.van;
+        this.selfoon = data.selfoon;
+        this.epos = data.epos;
     }
 
     key: string;
-    name: string;
-    surname: string;
-    phone: number;
-    email: string;
+    naam: string;
+    van: string;
+    selfoon: number;
+    epos: string;
 
     toData(): CodeeData {
         return {
-            name: this.name,
-            surname: this.surname,
-            phone: this.phone,
-            email: this.email
+            naam: this.naam,
+            van: this.van,
+            selfoon: this.selfoon,
+            epos: this.epos
         } as CodeeData;
     }
 }
 
 export class CodeeData {
-    name: string;
-    surname: string;
-    phone: number;
-    email: string;
+    naam: string;
+    van: string;
+    selfoon: number;
+    epos: string;
 }
