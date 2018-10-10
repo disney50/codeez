@@ -32,7 +32,11 @@
                 <div class="row justify-content-center align-items-center">
                   <div class="col-12">
                     <ul class="list-group text-center text-white">
-                      <li class="list-group-item" style="background: #17B29D">nuwe codee</li>
+                      <li class="list-group-item mb-1" style="background: #17B29D"
+                        *ngFor="let codee of codeez">
+                        <h5>{{codee.name}} {{codee.surname}}</h5>
+                        <b>nommer: </b>{{codee.phone}} <b> epos: </b> {{codee.email}}
+                      </li>
                     </ul>
                   </div>
                 </div>
