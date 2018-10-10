@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app-state';
 import { Codee } from 'src/app/models/codee';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -11,13 +12,17 @@ import { Codee } from 'src/app/models/codee';
 export class ListComponent implements OnInit {
   codeez: Codee[];
 
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>, public router: Router) { }
 
   ngOnInit() {
     this.store.select("codee").subscribe(codeeState => {
       this.codeez = codeeState.codeez;
       console.log(this.codeez);
     })
+  }
+
+  navigateForm() {
+    this.router.navigate([''])
   }
 
 }
