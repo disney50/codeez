@@ -6,6 +6,8 @@
     display: flex;
     overflow-y: auto;
     align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .img-responsive {

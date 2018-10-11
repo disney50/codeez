@@ -6,6 +6,7 @@ export class Codee {
         this.van = data.van;
         this.selfoon = data.selfoon;
         this.epos = data.epos;
+        this.ouderdom = data.ouderdom;
     }
 
     key: string;
@@ -13,13 +14,15 @@ export class Codee {
     van: string;
     selfoon: number;
     epos: string;
+    ouderdom: number;
 
     toData(): CodeeData {
         return {
             naam: this.naam,
             van: this.van,
             selfoon: this.selfoon,
-            epos: this.epos
+            epos: this.epos,
+            ouderdom: this.ouderdom
         } as CodeeData;
     }
 }
@@ -29,4 +32,5 @@ export class CodeeData {
     van: string;
     selfoon: number;
     epos: string;
+    ouderdom: number;
 }
